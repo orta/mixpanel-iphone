@@ -171,8 +171,8 @@ static Mixpanel *sharedInstance = nil;
                                      object:nil];
         }
 #endif
-        
-#ifndef TARGET_OS_IPHONE
+
+#if TARGET_OS_IPHONE == 0 // OS X
         [notificationCenter addObserver:self
                                selector:@selector(applicationWillTerminate:)
                                    name:NSApplicationWillTerminateNotification
@@ -185,7 +185,7 @@ static Mixpanel *sharedInstance = nil;
                                selector:@selector(applicationDidBecomeActive:)
                                    name:NSApplicationDidBecomeActiveNotification
                                  object:nil];
-#endif // !TARGET_OS_IPHONE
+#endif
         [self unarchive];
     }
 
