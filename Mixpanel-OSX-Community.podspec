@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         =  'Mixpanel-OSX-Community'
-  s.version      =  '2.1.0'
+  s.version      =  '2.1.1'
   s.license      =  'Apache License'
   s.summary      =  'OS X tracking library for Mixpanel Analytics.'
   s.homepage     =  'http://mixpanel.com'
